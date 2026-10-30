@@ -10,7 +10,7 @@ export class BrandsService {
   private brands: Brand[] = [
     {
       id: uuid(),
-      name: 'toyota',
+      name: 'Barcelona',
       createdAt: new Date().getTime(),
     }
   ]
@@ -60,4 +60,8 @@ export class BrandsService {
   remove(id: string) {
     this.brands = this.brands.filter ( brand => brand.id !== id)
   }
+
+  fillBrandsWithSeedData (brands: Brand[]){
+          this.brands = brands;
+      }
 }
