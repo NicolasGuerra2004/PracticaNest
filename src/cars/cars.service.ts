@@ -65,6 +65,7 @@ export class CarsService{
                     ...updateCardDto,
                     id
                 }
+                return carDB;
             }
             return car;
         } );
